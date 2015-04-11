@@ -43,3 +43,20 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :development, :test do
+  #Pry Stack
+  gem 'better_errors'
+  gem 'pry-byebug'
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
+
+  # Rspec
+  gem 'spring-commands-rspec'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+
+  #Notifiers
+  gem 'rb-fsevent', require: false # mac
+  gem 'rb-inotify', require: false # linux
+end
