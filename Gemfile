@@ -15,6 +15,9 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+# Redis
+gem 'redis'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -27,34 +30,47 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Authentication
+gem 'devise'
+
+# Weather
+gem 'forecast_io'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
 group :development, :test do
   #Pry Stack
   gem 'better_errors'
-  gem 'pry-byebug'
+#  gem 'pry-byebug'
+  gem 'pry'
   gem 'pry-rescue'
   gem 'pry-stack_explorer'
 
   # Rspec
-  gem 'spring-commands-rspec'
   gem 'rspec-rails'
+
+  #Spring
+  gem 'spring'
+  gem 'guard-spring'
+  gem 'spring-commands-rspec'
+
+  #guard
   gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'guard-rubocop'
+  gem 'guard-bundler'
+  gem 'guard-migrate'
+  gem 'guard-jasmine', '>= 2.0.5'
+
+  # Javascript Testing
+  gem 'jasmine-rails'
+
+  # Mailer
+  gem 'mail_safe'
+
 
   #Notifiers
   gem 'rb-fsevent', require: false # mac

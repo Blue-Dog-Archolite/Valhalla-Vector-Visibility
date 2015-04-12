@@ -2,7 +2,7 @@ general: &general
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: thief
+  username: Valhalla-Vector-Visibility
   password: NoPasswordForYou
 
 development:
