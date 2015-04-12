@@ -1,0 +1,740 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.google.com/maps/api/geocode/json?address=43.5644,%20116.2228&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 12 Apr 2015 22:23:44 GMT
+      Expires:
+      - Mon, 13 Apr 2015 22:23:44 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - '*'
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=0.5
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "G207",
+                       "short_name" : "G207",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Xilinhaote Shi",
+                       "short_name" : "Xilinhaote Shi",
+                       "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                    },
+                    {
+                       "long_name" : "Xilinguole Meng",
+                       "short_name" : "Xilinguole Meng",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Neimenggu Zizhiqu",
+                       "short_name" : "Neimenggu Zizhiqu",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "China",
+                       "short_name" : "CN",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "G207, Xilinhaote Shi, Xilinguole Meng, Neimenggu Zizhiqu, China",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 43.5867358,
+                          "lng" : 116.1496753
+                       },
+                       "southwest" : {
+                          "lat" : 43.5326645,
+                          "lng" : 116.1280731
+                       }
+                    },
+                    "location" : {
+                       "lat" : 43.5603701,
+                       "lng" : 116.1360556
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 43.5867358,
+                          "lng" : 116.1496753
+                       },
+                       "southwest" : {
+                          "lat" : 43.5326645,
+                          "lng" : 116.1280731
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJv9rH1UpYBF4RLnMDJ3p6q0A",
+                 "types" : [ "route" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Xilinhot",
+                       "short_name" : "Xilinhot",
+                       "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                    },
+                    {
+                       "long_name" : "Xilin Gol",
+                       "short_name" : "Xilin Gol",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Inner Mongolia",
+                       "short_name" : "Inner Mongolia",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "China",
+                       "short_name" : "CN",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Xilinhot, Xilin Gol, Inner Mongolia, China",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 44.8905375,
+                          "lng" : 117.0543089
+                       },
+                       "southwest" : {
+                          "lat" : 43.03431080000001,
+                          "lng" : 115.3232683
+                       }
+                    },
+                    "location" : {
+                       "lat" : 43.933411,
+                       "lng" : 116.086032
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 44.8905375,
+                          "lng" : 117.0543089
+                       },
+                       "southwest" : {
+                          "lat" : 43.03431080000001,
+                          "lng" : 115.3232683
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ26c7mx7ABV4R8He6MhIDjis",
+                 "types" : [ "sublocality_level_1", "sublocality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Xilin Gol",
+                       "short_name" : "Xilin Gol",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Inner Mongolia",
+                       "short_name" : "Inner Mongolia",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "China",
+                       "short_name" : "CN",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Xilin Gol, Inner Mongolia, China",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 46.7749074,
+                          "lng" : 119.9845691
+                       },
+                       "southwest" : {
+                          "lat" : 41.5713982,
+                          "lng" : 111.1509723
+                       }
+                    },
+                    "location" : {
+                       "lat" : 43.933454,
+                       "lng" : 116.048222
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 44.1956432,
+                          "lng" : 116.6665649
+                       },
+                       "southwest" : {
+                          "lat" : 43.6595156,
+                          "lng" : 115.6750488
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ_Uv7w4a4BV4RS_WjfJ6wFZ0",
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Inner Mongolia",
+                       "short_name" : "Inner Mongolia",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "China",
+                       "short_name" : "CN",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Inner Mongolia, China",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 53.33717799999999,
+                          "lng" : 126.0755856
+                       },
+                       "southwest" : {
+                          "lat" : 37.4067797,
+                          "lng" : 97.17276269999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 40.81739,
+                       "lng" : 111.76629
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 53.33717799999999,
+                          "lng" : 126.0755856
+                       },
+                       "southwest" : {
+                          "lat" : 37.4067797,
+                          "lng" : 97.17276269999999
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ3xRp0kvMBTYRUOnCbYFGl9U",
+                 "types" : [ "administrative_area_level_1", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "China",
+                       "short_name" : "CN",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "China",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 53.56097399999999,
+                          "lng" : 134.77281
+                       },
+                       "southwest" : {
+                          "lat" : 18.1576157,
+                          "lng" : 73.49941369999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 35.86166,
+                       "lng" : 104.195397
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 53.56097399999999,
+                          "lng" : 134.77281
+                       },
+                       "southwest" : {
+                          "lat" : 18.1576157,
+                          "lng" : 73.49941369999999
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJwULG5WSOUDERbzafNHyqHZU",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 22:23:44 GMT
+- request:
+    method: get
+    uri: https://maps.google.com/maps/api/geocode/json?address=43.5644,%20-116.2228&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 12 Apr 2015 22:27:50 GMT
+      Expires:
+      - Mon, 13 Apr 2015 22:27:50 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - '*'
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=0.5
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "3201",
+                       "short_name" : "3201",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Boise Airport",
+                       "short_name" : "Boise Airport",
+                       "types" : [ "establishment" ]
+                    },
+                    {
+                       "long_name" : "Airport Way",
+                       "short_name" : "Airport Way",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Boise",
+                       "short_name" : "Boise",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Ada County",
+                       "short_name" : "Ada County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Idaho",
+                       "short_name" : "ID",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "83705",
+                       "short_name" : "83705",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Boise Airport (BOI), 3201 Airport Way, Boise, ID 83705, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 43.566163,
+                       "lng" : -116.223446
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 43.5675119802915,
+                          "lng" : -116.2220970197085
+                       },
+                       "southwest" : {
+                          "lat" : 43.5648140197085,
+                          "lng" : -116.2247949802915
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ-eD9xvBXrlQRT1pi4SEuI9E",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Boise Airport",
+                       "short_name" : "Boise Airport",
+                       "types" : [ "establishment" ]
+                    },
+                    {
+                       "long_name" : "1000",
+                       "short_name" : "1000",
+                       "types" : [ "subpremise" ]
+                    },
+                    {
+                       "long_name" : "3201",
+                       "short_name" : "3201",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Airport Way",
+                       "short_name" : "Airport Way",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Boise",
+                       "short_name" : "Boise",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Ada County",
+                       "short_name" : "Ada County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Idaho",
+                       "short_name" : "ID",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "83705",
+                       "short_name" : "83705",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Boise Airport (BOI), 3201 Airport Way #1000, Boise, ID 83705, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 43.5728869,
+                          "lng" : -116.1960575
+                       },
+                       "southwest" : {
+                          "lat" : 43.552903,
+                          "lng" : -116.2482528
+                       }
+                    },
+                    "location" : {
+                       "lat" : 43.5658231,
+                       "lng" : -116.222316
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 43.5728869,
+                          "lng" : -116.1960575
+                       },
+                       "southwest" : {
+                          "lat" : 43.552903,
+                          "lng" : -116.2482528
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJRxv4IfdXrlQRK74w5aXfzo4",
+                 "types" : [ "airport", "transit_station", "establishment" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "83705",
+                       "short_name" : "83705",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Boise",
+                       "short_name" : "Boise",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Ada County",
+                       "short_name" : "Ada County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Idaho",
+                       "short_name" : "ID",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Boise, ID 83705, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 43.6045609,
+                          "lng" : -116.1343659
+                       },
+                       "southwest" : {
+                          "lat" : 43.47479999999999,
+                          "lng" : -116.263071
+                       }
+                    },
+                    "location" : {
+                       "lat" : 43.5698551,
+                       "lng" : -116.2249298
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 43.6045609,
+                          "lng" : -116.1343659
+                       },
+                       "southwest" : {
+                          "lat" : 43.47479999999999,
+                          "lng" : -116.263071
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ5YAQIQNYrlQR6npOg2K6HE0",
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Boise",
+                       "short_name" : "Boise",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Ada County",
+                       "short_name" : "Ada County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Idaho",
+                       "short_name" : "ID",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Boise, ID, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 43.6898951,
+                          "lng" : -116.101909
+                       },
+                       "southwest" : {
+                          "lat" : 43.511717,
+                          "lng" : -116.3658869
+                       }
+                    },
+                    "location" : {
+                       "lat" : 43.6187102,
+                       "lng" : -116.2146068
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 43.6898951,
+                          "lng" : -116.101909
+                       },
+                       "southwest" : {
+                          "lat" : 43.511717,
+                          "lng" : -116.3658869
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJnbRH6XLxrlQRm51nNpuYW5o",
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Ada County",
+                       "short_name" : "Ada County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Idaho",
+                       "short_name" : "ID",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Ada County, ID, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 43.8074699,
+                          "lng" : -115.974239
+                       },
+                       "southwest" : {
+                          "lat" : 43.112238,
+                          "lng" : -116.5140551
+                       }
+                    },
+                    "location" : {
+                       "lat" : 43.478767,
+                       "lng" : -116.2420304
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 43.8074699,
+                          "lng" : -115.974239
+                       },
+                       "southwest" : {
+                          "lat" : 43.112238,
+                          "lng" : -116.5140551
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJySzGOs_0rlQRA33YPY5VCsM",
+                 "types" : [ "administrative_area_level_2", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Idaho",
+                       "short_name" : "ID",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Idaho, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 49.0011461,
+                          "lng" : -111.043495
+                       },
+                       "southwest" : {
+                          "lat" : 41.9880051,
+                          "lng" : -117.2413657
+                       }
+                    },
+                    "location" : {
+                       "lat" : 44.0682019,
+                       "lng" : -114.7420408
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 49.0011461,
+                          "lng" : -111.043495
+                       },
+                       "southwest" : {
+                          "lat" : 41.9880051,
+                          "lng" : -117.2413657
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ6Znkhaj_WFMRWIf3FQUwa9A",
+                 "types" : [ "administrative_area_level_1", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 71.3867745,
+                          "lng" : -66.94539469999999
+                       },
+                       "southwest" : {
+                          "lat" : 18.9110642,
+                          "lng" : 172.4458955
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.09024,
+                       "lng" : -95.712891
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 49.38,
+                          "lng" : -66.94
+                       },
+                       "southwest" : {
+                          "lat" : 25.82,
+                          "lng" : -124.39
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 22:27:50 GMT
+recorded_with: VCR 2.9.3

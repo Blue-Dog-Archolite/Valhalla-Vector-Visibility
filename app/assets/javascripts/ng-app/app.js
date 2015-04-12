@@ -9,7 +9,7 @@ angular
   ])
   .config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
-        //    key: 'your api key',
+        key: 'AIzaSyCDhdipeSFjmkk0lSMeSqYER3aAe6XI3Wc',
         v: '3.17',
         libraries: 'weather,geometry,visualization'
     });

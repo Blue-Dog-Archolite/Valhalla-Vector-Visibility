@@ -31,49 +31,28 @@
 #                          installed the spring binstubs per the docs)
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
-group :red_green_refactor do
-  guard :rspec, cmd: "bin/rspec", all_on_start: false do
-    require "guard/rspec/dsl"
-    dsl = Guard::RSpec::Dsl.new(self)
+group :red_green_refactor, halt_on_fail: true do
+  guard :rspec, cmd: 'rspec --format progress', all_on_start: false, all_after_pass: false do
+    watch(%r{^spec/.+_spec\.rb$})
+    watch(%r{^lib/(.+)\.rb$})                           { |m| "spec/lib/#{m[1]}_spec.rb" }
+    watch('spec/spec_helper.rb')                        { 'spec' }
 
-    # Feel free to open issues for suggestions and improvements
-
-    # RSpec files
-    rspec = dsl.rspec
-    watch(rspec.spec_helper) { rspec.spec_dir }
-    watch(rspec.spec_support) { rspec.spec_dir }
-    watch(rspec.spec_files)
-
-    # Ruby files
-    ruby = dsl.ruby
-    dsl.watch_spec_files_for(ruby.lib_files)
-
-    # Rails files
-    rails = dsl.rails(view_extensions: %w(erb haml slim))
-    dsl.watch_spec_files_for(rails.app_files)
-    dsl.watch_spec_files_for(rails.views)
-
-    watch(rails.controllers) do |m|
-      [
-        rspec.spec.("routing/#{m[1]}_routing"),
-        rspec.spec.("controllers/#{m[1]}_controller"),
-        rspec.spec.("acceptance/#{m[1]}")
-      ]
+    watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
+    watch(%r{^app/(.*)(\.erb|\.haml)$})                 { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
+    watch(%r{^app/controllers/(.+)_(controller)\.rb$})  do |m|
+      ["spec/routing/#{m[1]}_routing_spec.rb",
+       "spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb",
+       "spec/acceptance/#{m[1]}_spec.rb"]
     end
 
-    # Rails config changes
-    watch(rails.spec_helper)     { rspec.spec_dir }
-    watch(rails.routes)          { "#{rspec.spec_dir}/routing" }
-    watch(rails.app_controller)  { "#{rspec.spec_dir}/controllers" }
-
-    # Capybara features specs
-    watch(rails.view_dirs)     { |m| rspec.spec.("features/#{m[1]}") }
-
-    # Turnip features and steps
-    watch(%r{^spec/acceptance/(.+)\.feature$})
-    watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$}) do |m|
-      Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
-    end
+    watch(%r{^app/services/(.+)\.rb$})                  { |m| "spec/services/#{m[1]}_spec.rb" }
+    watch(%r{^app/controllers/api/(.+)\.rb$})           { |m| "spec/integration/#{m[1]}_spec.rb" }
+    watch(%r{^app/utility/(.+)\.rb$})                   { |m| "spec/utility/#{m[1]}_spec.rb" }
+    watch(%r{^app/presenters/(.+)\.rb$})                { |m| "spec/presenters/#{m[1]}_spec.rb" }
+    watch(%r{^app/utility/interfaces/(.+)\.rb$})        { |m| "spec/utility/interfaces/#{m[1]}_spec.rb" }
+    watch(%r{^spec/support/(.+)\.rb$})                  { 'spec' }
+    watch('config/routes.rb')                           { 'spec/routing' }
+    watch('app/controllers/application_controller.rb')  { 'spec' }
   end
 
 
@@ -86,12 +65,13 @@ group :red_green_refactor do
   end
 end
 
-
+=begin
 guard :jasmine, server: :webrick, server_mount: '/specs', all_on_start: false, port: 4747 do
   watch(%r{spec/javascripts/spec\.(js\.coffee|js|coffee)$})         { "spec/javascripts" }
   watch(%r{spec/javascripts/.+_spec\.(js\.coffee|js|coffee)$})
   watch(%r{app/assets/javascripts/(.+?)\.(js\.coffee|js|coffee)$})  { |m| "spec/javascripts/#{m[1]}_spec.#{m[2]}" }
 end
+=end
 
 if ENV['GUARD_BUNDLE']
   guard :bundler do

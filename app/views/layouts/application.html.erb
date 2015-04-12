@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Valhalla Vector Visibility</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
-  <%= csrf_meta_tags %>
-</head>
-<body ng-app="valhalla">
+  <head>
+    <title>Valhalla Vector Visibility</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <%= csrf_meta_tags %>
+    <base href="/">
+  </head>
 
-  <%= yield %>
+  <body ng-app="valhalla">
 
-</body>
+    <%= yield %>
+
+  </body>
 </html>

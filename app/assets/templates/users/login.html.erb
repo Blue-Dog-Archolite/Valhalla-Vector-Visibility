@@ -6,13 +6,15 @@
         <h1>Login</h1>
       </div>
 
-      <div class="body">
-        <div>Email: <input ng-model="login_user.email" /></div>
-        <div>Password: <input type="password" ng-model="login_user.password" /></div>
+      <form novalidate class="simple-form">
+        <div class="body">
+          <div>Email: <input ng-model="login_user.email" /></div>
+          <div>Password: <input type="password" ng-model="login_user.password" /></div>
 
-        <button ng-click="log_in_user(login_user)" class="btn btn-primary" >Login</button>
-        <button ng-click="log_out_user()" class="btn btn-primary" >Logout</button>
-      </div>
+          <button ng-click="log_in_user(login_user)" class="btn btn-primary" >Login</button>
+          <button ng-click="log_out_user()" class="btn btn-primary" >Logout</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

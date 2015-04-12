@@ -32,6 +32,13 @@ gem 'angular-rails-templates'
 
 gem 'angular_rails_csrf'
 
+# GeoWork
+gem 'geokit'
+gem 'world_airports'
+
+# Forcast
+gem 'forecast_io'
+
 # Devise
 gem 'devise'
 
@@ -41,23 +48,22 @@ group :development, :test do
 
   gem 'guard'
   gem 'guard-spring'
-  gem 'guard-rspec'
   gem 'guard-rubocop'
   gem 'guard-bundler'
   gem 'guard-migrate'
   gem 'guard-jasmine', '>= 2.0.5'
 
   gem 'spring-commands-rspec'
-  gem "spring-commands-cucumber"
-
-
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'guard-rspec'
 
+  gem 'factory_girl_rails'
   gem 'jasmine-rails'
 
   gem 'bundler-audit'
+  gem 'database_cleaner'
 
+  gem 'webmock'
   gem 'vcr'
 
   gem 'rb-inotify', require: false # linux

@@ -2,7 +2,10 @@
   <div class="container">
 
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">My App!</a>
+      <a class="navbar-brand" href="/">Flight Operation Weather Center</a>
+      <div class="navbar-brand">
+        {{ AuthService.currentUser() }}
+      </div>
     </div>
 
     <ul class="nav navbar-nav">
@@ -11,6 +14,7 @@
       <li><a ui-sref="default_map">Map View</a></li>
       <li><a ui-sref="user_login">Login</a></li>
     </ul>
+
 
   </div>
 </nav>
