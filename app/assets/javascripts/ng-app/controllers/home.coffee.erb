@@ -1,6 +1,4 @@
-angular.module('valhalla').controller 'HomeCtrl',['$scope', 'Auth', ($scope, Auth) ->
-#      console.log(Auth.currentUser())
-      console.log(Auth.isAuthenticated())
+angular.module('valhalla').controller 'HomeCtrl',['$scope', ($scope) ->
+  $scope.things = ['Angular', 'Rails 4.1', 'UI Router', 'Together!!']
 
-      $scope.things = ['Angular', 'Rails 4.1', 'UI Router', 'Together!!']
 ]

@@ -6,6 +6,13 @@ angular.module('valhalla.routes', ['ui.router']).config \
       url: '/'
       templateUrl: 'home.html'
       controller: 'HomeCtrl'
+    .state 'user_login',
+      controller: 'AuthController'
+      url: '/user_login'
+      templateUrl: 'users/login.html'
+    .state 'default_map',
+      url: '/maps'
+      templateUrl: 'maps/default.html'
     .state 'dashboard',
       abstract: 'true'
       url: '/dashboard'

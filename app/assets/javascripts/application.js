@@ -12,10 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+
 //= require angular
 //= require angular-animate
 //= require angular-ui-router
 //= require angular-rails-templates
 //= require angular-devise/lib/devise
+//= require angular-google-maps
+//= require lodash
+
 //= require_tree .
 //= require_tree ../templates
