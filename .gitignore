@@ -27,7 +27,7 @@ config/secrets.yml
 /vendor/bundle
 
 # Ruby Env
-.ruby-env
+/.ruby-env
 
 # Bower
 vendor/assets/components

@@ -1,0 +1,55 @@
+# defining all routes
+console.log('routes')
+
+angular.module('generalRouter', ['ui.router']).config \
+['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider', '$locationProvider', \
+($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider, $locationProvider) ->
+  console.log('loaded routes')
+  $stateProvider
+    .state 'review',
+      url: '/review'
+      templateUrl: "<%= asset_path('angular/templates/module/review.html')%>"
+    .state 'escalation',
+      url: '/escalation'
+      templateUrl: "<%= asset_path('angular/templates/module/escalation.html')%>"
+    .state 'escalation_encoded_params',
+      url: '/escalation/:encoded_params'
+      templateUrl: "<%= asset_path('angular/templates/module/single_post.html')%>"
+    .state 'single_post_encoded_params',
+      url: '/single_post/:encoded_params'
+      templateUrl: "<%= asset_path('angular/templates/module/single_post.html')%>"
+    .state 'tag_single_post',
+      url: '/tag_single_post/:id'
+      templateUrl: "<%= asset_path('angular/templates/module/tag_single_post.html')%>"
+    .state 'single_post',
+      url: '/single_post'
+      templateUrl: "<%= asset_path('angular/templates/module/single_post.html')%>"
+    .state 'search',
+      url: '/search'
+      templateUrl: "<%= asset_path('angular/templates/module/search.html')%>"
+    .state 'publish',
+      url: '/publish'
+      templateUrl: "<%= asset_path('angular/templates/module/publish.html')%>"
+    .state 'insights',
+      url: '/insights'
+      templateUrl: "<%= asset_path('angular/templates/module/insights.html')%>"
+    .state 'home',
+      url: '/home'
+      templateUrl: "<%= asset_path('angular/templates/module/home.html')%>"
+      controller: 'HomeController'
+    .state 'admin',
+      url: '/admin'
+      templateUrl: "<%= asset_path('angular/templates/admin/admin.html')%>"
+    .state 'engage',
+      url: '/engage'
+      templateUrl: "<%= asset_path('angular/templates/module/engage.html')%>"
+    .state 'analytics',
+      url: '/analytics'
+      controller: "AnalyticsController"
+      templateUrl: "<%= asset_path('angular/templates/module/analytics.html')%>"
+
+#  $urlRouterProvider.otherwise 'home'
+  $urlMatcherFactoryProvider.strictMode(false)
+  $locationProvider.html5Mode(false)
+
+]

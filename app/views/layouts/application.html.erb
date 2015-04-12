@@ -23,7 +23,13 @@
       <% end %>
     </p>
 
-    <%= yield %>
+    <div ng-view='map'/>
+
+    <div ng-view='main'>
+      <%= yield %>
+    </div>
+
+    <div ng-view='other'/>
 
   </body>
 </html>
