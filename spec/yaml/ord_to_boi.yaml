@@ -1,0 +1,99 @@
+---
+2014-01-01 00:00:00.000000000 -07:00: !ruby/object:Geokit::GeoLoc
+  accuracy: 4
+  city: Chicago
+  country: United States
+  country_code: US
+  district: Cook County
+  full_address: Chicago, IL, USA
+  lat: 41.8781136
+  lng: -87.6297982
+  precision: city
+  provider: google
+  province: IL
+  state: 
+  state_code: IL
+  state_name: Illinois
+  street_address: 
+  street_name: 
+  street_number: 
+  sub_premise: 
+  success: true
+  suggested_bounds: !ruby/object:Geokit::Bounds
+    sw: !ruby/object:Geokit::LatLng
+      lat: 41.6443349
+      lng: -87.9402669
+    ne: !ruby/object:Geokit::LatLng
+      lat: 42.023131
+      lng: -87.52404399999999
+  zip: 
+2014-01-01 01:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 42.22349874488544
+  lng: -89.52040335668643
+2014-01-01 02:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 42.537507047059684
+  lng: -91.43085411777912
+2014-01-01 03:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 42.81947275857554
+  lng: -93.35962226226566
+2014-01-01 04:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.06878326683364
+  lng: -95.30503140714421
+2014-01-01 05:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.28488488805788
+  lng: -97.26526563109444
+2014-01-01 06:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.46728831814785
+  lng: -99.23838068783566
+2014-01-01 07:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.61557362114451
+  lng: -101.22231772713342
+2014-01-01 08:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.72939463988212
+  lng: -103.21491935516711
+2014-01-01 09:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.80848272227686
+  lng: -105.21394778033391
+2014-01-01 10:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.85264967003454
+  lng: -107.21710471031643
+2014-01-01 11:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.86178983397667
+  lng: -109.22205259617874
+2014-01-01 12:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.835881301046285
+  lng: -111.22643676378038
+2014-01-01 13:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.77498614147834
+  lng: -113.2279079355278
+2014-01-01 14:00:00.000000000 -07:00: !ruby/object:Geokit::LatLng
+  lat: 43.679249709537295
+  lng: -115.22414462890836
+2014-01-01 14:29:50.984291076 -07:00: !ruby/object:Geokit::GeoLoc
+  accuracy: 4
+  city: Boise
+  country: United States
+  country_code: US
+  district: Ada County
+  full_address: Boise, ID, USA
+  lat: 43.6187102
+  lng: -116.2146068
+  precision: city
+  provider: google
+  province: ID
+  state: 
+  state_code: ID
+  state_name: Idaho
+  street_address: 
+  street_name: 
+  street_number: 
+  sub_premise: 
+  success: true
+  suggested_bounds: !ruby/object:Geokit::Bounds
+    sw: !ruby/object:Geokit::LatLng
+      lat: 43.511717
+      lng: -116.3658869
+    ne: !ruby/object:Geokit::LatLng
+      lat: 43.6898951
+      lng: -116.101909
+  zip: 

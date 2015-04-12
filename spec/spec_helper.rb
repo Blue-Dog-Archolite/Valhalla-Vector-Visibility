@@ -30,7 +30,7 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    Rails.cache.clear
+    REDIS.flushall
   end
 
   config.around(:each, :skip_transactions => true) do |ex|

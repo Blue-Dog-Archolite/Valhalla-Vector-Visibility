@@ -17,6 +17,12 @@ FactoryGirl.define do
     end
   end
 
+  factory :ord_to_boi, class: Hash do
+    initialize_with do
+      YAML.load_file(Rails.root + 'spec/yaml/ord_to_boi.yaml')
+    end
+  end
+
   factory :ord, class: Geokit::GeoLoc do
     accuracy     { 4                }
     city         { "Chicago"        }

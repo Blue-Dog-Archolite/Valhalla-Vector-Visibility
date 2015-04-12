@@ -4,6 +4,7 @@ describe FlightPath do
   before do
     @origin = FactoryGirl.build(:ord_airport)
     @destination = FactoryGirl.build(:boi_airport)
+    # set static time to allow for VCR catch as well as back forecasting
     @starting_time = Time.new('2014/03/21')
   end
 
@@ -43,7 +44,10 @@ describe FlightPath do
       expect(points.keys.map(&:to_i)).to match_array(point_times)
     end
 
-
+    it 'hads off responsibility to ForecastFlightPlan' do
+      expect(ForecastFlightPlan).to receive(:perdict).and_return({})
+      @flight_path.forecast
+    end
   end
 
   describe 'lat, long', :vcr do
@@ -60,6 +64,7 @@ describe FlightPath do
     end
 
     it 'calculates the distance correctly' do
+      # Difference due to exact locations
       expect(@flight_path.distance).to eq(1435.0494809532943)
     end
 
@@ -68,6 +73,7 @@ describe FlightPath do
     end
 
     it 'calculates the forcast points correctly' do
+      # Difference due to exact locations
       points = @flight_path.points
       point_times = [1388559600, 1388563200, 1388566800,
                      1388570400, 1388574000, 1388577600,
