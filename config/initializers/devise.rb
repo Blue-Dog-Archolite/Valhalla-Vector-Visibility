@@ -4,13 +4,13 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '9c81dd9937d6fb8a5b79609e54190749dce45576a9874df070279c765d88a6778d6f3fbe50cb0d9565d67a932958467e27e43329f718cea48828895ae743b664'
+  # config.secret_key = 'dd675c81b9b7e7c84c4b4c0d307ea663d7aee5c3d9c7b0342fbec01ca88dbce2ab5955767ce72835c62000317e76015015077b2385a2b865e2e7530f6dc2c21f'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = ENV['MAILER_SENDER']
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '18a5184cda573f7293099fbb542fdb5bff45fce953048eb67a02c7ca6fe499d0ba53921da03cd32e67897765e8ffda10fd8caf716fc7646a44b275279389ba17'
+  # config.pepper = 'af7fc2f5b148a6c195dc645938e5a339164c90b6880f6a01dfb619a298c77e6b8bf5d0a6baa3e31f3340ec1d5249dd0b8c1410aefc387b9cdb9ffd91285699ee'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -150,8 +150,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  config.timeout_in = ENV['TIMEOUT_DURATION'] ? ENV['TIMEOUT_DURATION'].to_i : 30.minutes
-
+  # config.timeout_in = 30.minutes
 
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false

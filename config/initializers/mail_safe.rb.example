@@ -1,3 +1,0 @@
-if defined?(MailSafe::Config)
-  MailSafe::Config.replacement_address = 'test@example.com'
-end

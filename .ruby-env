@@ -4,6 +4,12 @@ AUTO_MIGRATE=true
 
 MAILER_SENDER='blue.dog.archolite@gmail.com'
 
-REDIS_URL='localhost:6379'
-
 TIMEOUT_DURATION=220903200
+
+REDIS_HOST=localhost
+REDIS_PORT=6379
+
+FORECAST_IO_API_KEY=236ff7fb93910a031342851919098db3
+
+plotwatt_password='-~&KJRU_Qjw3^@+K44:='
+rmeyer_password='x55et5spii'

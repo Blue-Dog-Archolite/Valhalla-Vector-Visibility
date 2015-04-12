@@ -31,10 +31,8 @@
 #                          installed the spring binstubs per the docs)
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
-
-
-group :red_green_refactor, halt_on_fail: true do
-  guard :rspec, cmd:"spring rspec", all_after_pass: false, all_on_start: false  do
+group :red_green_refactor do
+  guard :rspec, cmd: "bin/rspec", all_on_start: false do
     require "guard/rspec/dsl"
     dsl = Guard::RSpec::Dsl.new(self)
 
@@ -71,19 +69,20 @@ group :red_green_refactor, halt_on_fail: true do
     # Capybara features specs
     watch(rails.view_dirs)     { |m| rspec.spec.("features/#{m[1]}") }
 
-      # Turnip features and steps
-      watch(%r{^spec/acceptance/(.+)\.feature$})
+    # Turnip features and steps
+    watch(%r{^spec/acceptance/(.+)\.feature$})
     watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$}) do |m|
       Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
     end
   end
-end
 
-if ENV['STYLE_ENFORCEMENT']
-  guard :rubocop, all_on_start: false, keep_failed: false do
-    ignore(%r{factory.rb})
-    watch(%r{.+\.rb$})
-    watch(%r{(?:.+/)?\.rubocop\.yml$}) { |m| File.dirname(m[0]) }
+
+  if ENV['STYLE_ENFORCEMENT']
+    guard :rubocop, all_on_start: false, keep_failed: false do
+      ignore(%r{factory.rb})
+      watch(%r{.+\.rb$})
+      watch(%r{(?:.+/)?\.rubocop\.yml$}) { |m| File.dirname(m[0]) }
+    end
   end
 end
 
@@ -106,4 +105,3 @@ if ENV['AUTO_MIGRATE']
     watch('db/seeds.rb')
   end
 end
-
