@@ -2,19 +2,10 @@ angular.module('valhalla.routes', ['ui.router']).config \
 ['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider', '$locationProvider', \
 ($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider, $locationProvider) ->
   $stateProvider
-    .state 'home',
-      url: '/'
-      templateUrl: 'home.html'
-      controller: 'HomeCtrl'
     .state 'user_login',
       controller: 'AuthController'
       url: '/user_login'
       templateUrl: 'users/login.html'
-    .state 'default_map',
-      url: '/maps'
-      controller: 'MapController'
-      templateUrl: 'maps/default.html'
-
 
     .state 'flight_plans',
       abstract: 'true'
@@ -25,9 +16,9 @@ angular.module('valhalla.routes', ['ui.router']).config \
       parent: 'flight_plans'
       url: ''
       templateUrl: 'flight_plans/index.html'
-      controller: 'FlightPlanController'
+      controller: 'FlightPlansController'
       resolve:
-        flightPlan: (FlightPlanService) ->
+        flightPlans: (FlightPlanService) ->
           FlightPlanService.query().$promise
 
     .state 'flight_plan',
@@ -47,6 +38,6 @@ angular.module('valhalla.routes', ['ui.router']).config \
       resolve:
         flightPlan: -> {}
 
-   $urlRouterProvider.otherwise('/')
+   $urlRouterProvider.otherwise('/flight_plans')
    $locationProvider.html5Mode(true)
 ]

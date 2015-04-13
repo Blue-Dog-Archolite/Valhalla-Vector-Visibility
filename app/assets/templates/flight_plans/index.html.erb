@@ -1,7 +1,7 @@
 <h1>Flight Plans</h1>
 
 <ul>
-  <li ng-repeat='plan in flight_plan'>
+  <li ng-repeat='plan in flight_plans'>
     <a ui-sref="flight_plan({id: {{ plan.id }} })">
       {{plan.origin}} - {{plan.destination}} @ {{plan.departure_time}}
     </a>

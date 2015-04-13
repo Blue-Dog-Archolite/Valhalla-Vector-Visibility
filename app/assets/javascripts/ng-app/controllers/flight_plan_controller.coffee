@@ -8,11 +8,6 @@ angular.module('valhalla').controller 'FlightPlanController', \
 
   $scope.path = FlightMapService.flight_path($scope.flight_plan)
 
-  console.log('path?')
-  console.log($scope.path)
-  console.log('map?')
-  console.log($scope.map)
-
   $scope.table = [
     { call: 'time',                 label: 'Time'},
     { call: 'latitude',             label: 'Latitude'},
