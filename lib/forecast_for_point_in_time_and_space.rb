@@ -1,21 +1,4 @@
 module ForecastForPointInTimeAndSpace
-  def self.labels
-    {
-      latitude:              'Latitude',
-      longitude:             'Longitude',
-      time:                  'Time',
-      summary:               'Summary',
-      precipIntensity:       'Percipitatin Intencity',
-      precipProbability:     'Percipitation Chance',
-      temperature:           'Temp',
-      apparentTemperature:   'Feels Like',
-      dewPoint:              'Dew Point',
-      humidity:              'Humidity',
-      windSpeed:             'Wind Speed',
-      windBearing:           'Wind Bearing'
-    }
-  end
-
   def self.predict(geo_point, time)
     # cache and check
     key = "#{Rails.env}-#{geo_point.ll}-#{time.to_i}"

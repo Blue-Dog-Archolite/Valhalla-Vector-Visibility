@@ -8,7 +8,7 @@ module Api
     end
 
     def show
-      render json: flight_plan
+      @flight_plan
     end
 
     def create

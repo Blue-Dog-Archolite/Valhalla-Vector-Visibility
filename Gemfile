@@ -74,8 +74,11 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'database_cleaner'
 
-  gem 'webmock'
   gem 'vcr'
 
   gem 'rb-inotify', require: false # linux
+end
+
+group :test do
+  gem 'webmock'
 end

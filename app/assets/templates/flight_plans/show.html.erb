@@ -1,4 +1,5 @@
 <h4> Your Flight Plan Forecast</h4>
+<div id='summary'>
 <ul>
   <li>
     <div id='origin'>Origin: {{ flight_plan.origin}} </div>
@@ -13,24 +14,53 @@
     <div id='interval'>Sampling Interval: {{ flight_plan.interval}} </div>
   </li>
 </ul>
+</div>
 
-<img src="<%= @chart %>">
+<div id='map'>
+</div>
 
-<% @labels = []; @forecast = []; %>
-<table>
-  <tr>
-    <% @labels.each do |key, label|%>
-      <td> <%= label %> </td>
-  <% end %>
-  </tr>
-
-  <% @forecast.each do |point| %>
+<div id='forecast-table'>
+  <table>
     <tr>
-    <% @labels.keys.each do |key| %>
+      <td ng-repeat='row in table'>{{row.label}}</td>
+    </tr>
+    <tr ng-repeat='row in flight_plan.forecast'>
       <td>
-      <%= point[key]%>
-    </td>
-  <% end %>
-  </tr>
-<% end %>
-</table>
+        {{row.time}}
+      </td>
+      <td>
+        {{row.latitude}}
+      </td>
+      <td>
+        {{row.longitude}}
+      </td>
+      <td>
+        {{row.summary}}
+      </td>
+      <td>
+        {{row.precipIntensity}}
+      </td>
+      <td>
+        {{row.precipProbability}}
+      </td>
+      <td>
+        {{row.temperature}}
+      </td>
+      <td>
+        {{row.apparentTemperature}}
+      </td>
+      <td>
+        {{row.dewPoint}}
+      </td>
+      <td>
+        {{row.humidity}}
+      </td>
+      <td>
+        {{row.windSpeed}}
+      </td>
+      <td>
+        {{row.windBearing}}
+      </td>
+    </tr>
+  </table>
+</div>
