@@ -1,11 +1,22 @@
-<h1>
-  show me
-  </h1>
+<h4> Your Flight Plan Forecast</h4>
+<ul>
+  <li>
+    <div id='origin'>Origin: {{ flight_plan.origin}} </div>
+  </li>
+  <li>
+    <div id='destination'>Destination: {{ flight_plan.destination}} </div>
+  </li>
+  <li>
+    <div id='speed'>Speed: {{ flight_plan.speed}} </div>
+  </li>
+  <li>
+    <div id='interval'>Sampling Interval: {{ flight_plan.interval}} </div>
+  </li>
+</ul>
 
+<img src="<%= @chart %>">
 
-  <img src="<%= @chart %>">
-
-  <% @labels = []; @forecast = []; %>
+<% @labels = []; @forecast = []; %>
 <table>
   <tr>
     <% @labels.each do |key, label|%>
