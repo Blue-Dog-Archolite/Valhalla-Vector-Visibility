@@ -8,6 +8,19 @@ describe FlightPath do
     @starting_time = Time.new('2014/03/21')
   end
 
+  describe 'gets all current conditions for the time and location', :vcr do
+    before do
+      @flight_path = FlightPath.new(@origin[:code], @destination[:code], 100, 1, @starting_time)
+    end
+
+    it 'pulls the current values from forecast' do
+      forecast = @flight_path.forecast
+      expect(forecast).to be_nil
+    end
+
+  end
+
+  # TODO move this all to flight plan
   describe 'airport codes', :vcr do
     before do
       @flight_path = FlightPath.new(@origin[:code], @destination[:code], 100, 1, @starting_time)
@@ -44,8 +57,8 @@ describe FlightPath do
       expect(points.keys.map(&:to_i)).to match_array(point_times)
     end
 
-    it 'hads off responsibility to ForecastFlightPlan' do
-      expect(ForecastFlightPlan).to receive(:perdict).and_return({})
+    it 'hands off responsibility to ForecastFlightPlan' do
+      expect(ForecastForPointInTimeAndSpace).to receive(:predict).and_return({}).exactly(16).times
       @flight_path.forecast
     end
   end

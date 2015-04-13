@@ -4,26 +4,28 @@ describe ForecastForPointInTimeAndSpace, :vcr do
   let(:subject)     { ForecastForPointInTimeAndSpace }
   let(:flight_path) { FactoryGirl.build(:ord_to_boi) }
 
-  it '#forecast_for' do
+  it '#predict' do
     flight_path.each do |time, location|
-      ff = subject.forecast_for(location, time.to_i)
-      expect(ff.currently.time).to eq(time.to_i)
-      expect(ff.keys).to eq(
-        [
-          "latitude", "longitude", "timezone", "offset",
-          "currently", "hourly", "daily", "flags"
-        ]
-      )
+      ff = subject.predict(location, time.to_i)
+      expect(ff.time).to eq(time.to_i)
+      [
+        'time', 'summary', 'icon', 'precipIntensity',
+        'precipProbability', 'temperature', 'apparentTemperature',
+        'dewPoint', 'humidity', 'windSpeed', 'windBearing',
+        'visibility'
+      ].each do |k|
+        expect(ff.key?(k.to_sym)).to be(true)
+      end
     end
   end
 
   it 'only calls to ForecastIO once per set of data' do
     point = flight_path.first
-    key = "41.8781136,-87.6297982-1388559600"
+    key = Rails.env + '-41.8781136,-87.6297982-1388559600'
+    value = Hashie::Mash.new('currently' => { 'key' => 'value' })
     REDIS.del(key)
-    expect(ForecastIO).to receive(:forecast).once.and_return({"key" => "value"})
-    subject.forecast_for(point[1], point[0])
-    subject.forecast_for(point[1], point[0])
+    expect(ForecastIO).to receive(:forecast).once.and_return(value)
+    subject.predict(point[1], point[0])
+    subject.predict(point[1], point[0])
   end
 end
-

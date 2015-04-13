@@ -39,7 +39,15 @@ class FlightPath
   end
 
   def forecast
-    ForecastFlightPlan.perdict(points)
+    return @forecast unless @forecast.blank?
+
+    @forecast = {}
+
+    points.each do |time, location|
+      @forecast[time.to_i] = ForecastForPointInTimeAndSpace.predict(location, time)
+    end
+
+    @forecast
   end
 
   private
