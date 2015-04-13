@@ -1,0 +1,542 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.google.com/maps/api/geocode/json?address=41.9786,%20-87.9047&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 13 Apr 2015 22:10:00 GMT
+      Expires:
+      - Tue, 14 Apr 2015 22:10:00 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - '*'
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=0.5
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Arrivals",
+                       "short_name" : "Arrivals",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "O'Hare International Airport",
+                       "short_name" : "O'Hare International Airport",
+                       "types" : [ "establishment" ]
+                    },
+                    {
+                       "long_name" : "O'Hare",
+                       "short_name" : "O'Hare",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chgo",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Cook County",
+                       "short_name" : "Cook County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "60666",
+                       "short_name" : "60666",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "O'Hare International Airport, Arrivals, Chicago, IL 60666, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 41.9795201,
+                          "lng" : -87.905581
+                       },
+                       "southwest" : {
+                          "lat" : 41.9783088,
+                          "lng" : -87.90584919999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.9789145,
+                       "lng" : -87.90571509999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.98026343029151,
+                          "lng" : -87.9043661197085
+                       },
+                       "southwest" : {
+                          "lat" : 41.97756546970851,
+                          "lng" : -87.90706408029151
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJM6Hmlie0D4gRYDhJVFWtVHY",
+                 "types" : [ "route" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "O'Hare",
+                       "short_name" : "O'Hare",
+                       "types" : [ "subway_station", "train_station", "transit_station", "establishment" ]
+                    },
+                    {
+                       "long_name" : "O'Hare",
+                       "short_name" : "O'Hare",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chgo",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Cook County",
+                       "short_name" : "Cook County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "60666",
+                       "short_name" : "60666",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "O'Hare, Chicago, IL 60666, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 41.9776653,
+                       "lng" : -87.9042231
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.9790142802915,
+                          "lng" : -87.90287411970849
+                       },
+                       "southwest" : {
+                          "lat" : 41.9763163197085,
+                          "lng" : -87.90557208029151
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ5Y411Ce0D4gRwM3B909Z8Ho",
+                 "types" : [ "subway_station", "train_station", "transit_station", "establishment" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "60666",
+                       "short_name" : "60666",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chgo",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Chicago, IL 60666, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 42.0084293,
+                          "lng" : -87.87791709999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.9513079,
+                          "lng" : -87.939048
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.9849481,
+                       "lng" : -87.9089623
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 42.0084293,
+                          "lng" : -87.87791709999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.9513079,
+                          "lng" : -87.939048
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJBZRKFCK0D4gR6iziHH4xEaE",
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "O'Hare International Airport",
+                       "short_name" : "O'Hare International Airport",
+                       "types" : [ "establishment" ]
+                    },
+                    {
+                       "long_name" : "10000",
+                       "short_name" : "10000",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "W O'Hare Ave",
+                       "short_name" : "W O'Hare Ave",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chgo",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "60666",
+                       "short_name" : "60666",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "O'Hare International Airport, 10000 W O'Hare Ave, Chicago, IL 60666, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 42.0085371,
+                          "lng" : -87.87653600000002
+                       },
+                       "southwest" : {
+                          "lat" : 41.9510549,
+                          "lng" : -87.93888009999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.9741625,
+                       "lng" : -87.9073214
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 42.0085371,
+                          "lng" : -87.87653600000002
+                       },
+                       "southwest" : {
+                          "lat" : 41.9510549,
+                          "lng" : -87.93888009999999
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ82J3aie0D4gRS61ZAgdHF1E",
+                 "types" : [ "airport", "transit_station", "establishment" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "O'Hare",
+                       "short_name" : "O'Hare",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chgo",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Cook County",
+                       "short_name" : "Cook County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "O'Hare, Chicago, IL, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 42.0089905,
+                          "lng" : -87.83479489999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.9372854,
+                          "lng" : -87.9401141
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.9772983,
+                       "lng" : -87.8368909
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 42.0089905,
+                          "lng" : -87.83479489999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.9372854,
+                          "lng" : -87.9401141
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJYd6yS4S2D4gRpPpILxoBbUg",
+                 "types" : [ "neighborhood", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "O'Hare",
+                       "short_name" : "O'Hare",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chgo",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Cook County",
+                       "short_name" : "Cook County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "O'Hare, Chicago, IL, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 42.0089905,
+                          "lng" : -87.83479489999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.9372854,
+                          "lng" : -87.9401141
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.9772281,
+                       "lng" : -87.8367209
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 42.0089905,
+                          "lng" : -87.83479489999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.9372854,
+                          "lng" : -87.9401141
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ8WarJAzKD4gRim-BoGYoIIA",
+                 "types" : [ "neighborhood", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "North Side",
+                       "short_name" : "North Side",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chgo",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Cook County",
+                       "short_name" : "Cook County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "North Side, Chicago, IL, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 42.0230385,
+                          "lng" : -87.62007589999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.9107845,
+                          "lng" : -87.9401141
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.95731,
+                       "lng" : -87.7566513
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 42.0230385,
+                          "lng" : -87.62007589999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.9107845,
+                          "lng" : -87.9401141
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJB-i1p0rMD4gRNhC11Jiwrgw",
+                 "types" : [ "neighborhood", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chgo",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Cook County",
+                       "short_name" : "Cook County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Chicago, IL, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 42.023131,
+                          "lng" : -87.52404399999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.6443349,
+                          "lng" : -87.9402669
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.8781136,
+                       "lng" : -87.6297982
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 42.023131,
+                          "lng" : -87.52404399999999
+                       },
+                       "southwest" : {
+                          "lat" : 41.6443349,
+                          "lng" : -87.9402669
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ7cv00DwsDogRAMDACa2m4K8",
+                 "types" : [ "locality", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Mon, 13 Apr 2015 22:10:01 GMT
+recorded_with: VCR 2.9.3

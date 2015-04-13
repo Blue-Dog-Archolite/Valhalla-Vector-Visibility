@@ -27,8 +27,6 @@ describe FlightPath do
     end
   end
 
-
-
   # TODO move this all to flight plan
   describe 'airport codes', :vcr do
     before do
@@ -69,6 +67,44 @@ describe FlightPath do
     it 'hands off responsibility to ForecastFlightPlan' do
       expect(ForecastForPointInTimeAndSpace).to receive(:predict).and_return({}).exactly(16).times
       @flight_path.forecast
+    end
+  end
+
+  describe 'lat, long with interval 3', :vcr do
+    before do
+      @flight_path = FlightPath.new(@origin[:ll], @destination[:ll], 100, 3, @starting_time)
+    end
+
+    it 'calculates the distance correctly' do
+      # Difference due to exact locations
+      expect(@flight_path.distance).to eq(1435.0494809532943)
+    end
+
+    it 'calculates the intervals correctly' do
+      expected_intervals =  (@flight_path.distance / (100 * 3)).to_i
+      expect(@flight_path.intervals).to eq(expected_intervals)
+    end
+
+    it 'calculates the forcast points correctly' do
+      # Difference due to exact locations
+      points = @flight_path.points
+
+      point_times = [
+        (@starting_time + 0.hours).to_i,
+        (@starting_time + 3.hours).to_i,
+        (@starting_time + 6.hours).to_i,
+        (@starting_time + 9.hours).to_i,
+        (@starting_time + 12.hours).to_i,
+        # Arrival Time
+        1395411661
+      ]
+
+      expect(@flight_path.travel_time.to_i).to eq(14)
+
+      expect(points.keys.count).to eq(6)
+
+      # Using to_i to get around issues with Matchers and Times
+      expect(points.keys.map(&:to_i)).to match_array(point_times)
     end
   end
 

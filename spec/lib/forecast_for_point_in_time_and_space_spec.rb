@@ -11,9 +11,9 @@ describe ForecastForPointInTimeAndSpace, :vcr do
       expect(ff[:time]).to eq(time.strftime('%m-%d-%Y %H:%M'))
       [
         :latitude, :longitude, :time,
-       :summary, :precipIntensity, :precipProbability,
-       :temperature, :apparentTemperature, :dewPoint,
-       :humidity, :windSpeed, :windBearing
+        :summary, :precipIntensity, :precipProbability,
+        :temperature, :apparentTemperature, :dewPoint,
+        :humidity, :windSpeed, :windBearing
       ].each do |k|
         expect(ff.key?(k)).to be(true)
       end

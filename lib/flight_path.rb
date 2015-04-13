@@ -56,8 +56,9 @@ class FlightPath
     @forcast_locations = { departure => origin }
 
     # Points between
-    (1..intervals).each do |interval|
-      @forcast_locations[time_at_interval(interval)] = origin.endpoint(heading, (interval * speed).to_i)
+    (1..intervals).each do |current_interval|
+      current_time_location = (current_interval * frequency)
+      @forcast_locations[time_at_interval(current_time_location)] = origin.endpoint(heading, (current_time_location * speed).to_i)
     end
 
     # Destination location and time
@@ -75,7 +76,7 @@ class FlightPath
     Geokit::Geocoders::GoogleGeocoder.geocode(location)
   end
 
-  def time_at_interval(interval)
-    Time.at(departure.to_i + interval.hours)
+  def time_at_interval(current_time_interval)
+    Time.at(departure.to_i + current_time_interval.hours)
   end
 end
