@@ -1,5 +1,6 @@
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "globals";
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "dashboard";
 
 #forecast-table {

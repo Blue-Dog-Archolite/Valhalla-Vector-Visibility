@@ -1,3 +1,11 @@
+# Things I have done wrong
+- Spent first day on Angular Devise Integration and Failed
+- Spent Second Day on Angular google maps with old tutorial
+- Didn't spend the first and second day writing the API then working towards SPA
+- Didn't validate assumptions made in interval test and lost some time finding that bug
+- Didn't add all the Jasmine Tests I wanted
+- Used Bower for the first time on a time crunch
+
 # Things that are not working yet
 - Auth persistance
 - Auth Display of current User
