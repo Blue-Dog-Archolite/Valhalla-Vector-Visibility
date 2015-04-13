@@ -4,9 +4,14 @@ angular.module('valhalla').controller 'FlightPlanController', \
 
   $scope.flight_plan = flightPlan
 
-  $scope.map = FlightMapService.map
+  $scope.map = FlightMapService.flight_path_map($scope.flight_plan)
 
-  $scope.path = FlightMapService.path
+  $scope.path = FlightMapService.flight_path($scope.flight_plan)
+
+  console.log('path?')
+  console.log($scope.path)
+  console.log('map?')
+  console.log($scope.map)
 
   $scope.table = [
     { call: 'time',                 label: 'Time'},
