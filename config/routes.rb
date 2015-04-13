@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
-
   devise_for :users
+
+
+  namespace :api do #, defaults: {format: 'json'} do
+    resources :flight_plans
+  end
+
   root 'application#index'
 
-  
   get "*path" => "application#index"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

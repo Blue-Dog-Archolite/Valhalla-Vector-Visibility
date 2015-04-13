@@ -93,6 +93,7 @@ GEM
     fssm (0.2.10)
     geokit (1.9.0)
       multi_json (>= 1.3.2)
+    googlecharts (1.6.10)
     guard (2.12.5)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -350,6 +351,7 @@ DEPENDENCIES
   factory_girl_rails
   forecast_io
   geokit
+  googlecharts
   guard
   guard-bundler
   guard-jasmine (>= 2.0.5)

@@ -15,7 +15,8 @@ describe FlightPath do
 
     it 'pulls the current values from forecast' do
       forecast = @flight_path.forecast
-      expect(forecast).to be_nil
+      expected_forecast = FactoryGirl.build(:ord_to_boi_forecast)
+      expect(forecast).to eq(expected_forecast)
     end
 
   end

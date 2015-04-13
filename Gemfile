@@ -41,6 +41,9 @@ gem 'world_airports'
 # Forcast
 gem 'forecast_io'
 
+# Chart
+gem 'googlecharts'
+
 # Devise
 gem 'devise'
 

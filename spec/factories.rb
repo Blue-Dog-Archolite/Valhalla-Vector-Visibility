@@ -23,6 +23,12 @@ FactoryGirl.define do
     end
   end
 
+  factory :ord_to_boi_forecast, class: Hash do
+    initialize_with do
+      YAML.load_file(Rails.root + 'spec/yaml/ord_to_boi_forecast.yaml')
+    end
+  end
+
   factory :ord, class: Geokit::GeoLoc do
     accuracy     { 4                }
     city         { "Chicago"        }
