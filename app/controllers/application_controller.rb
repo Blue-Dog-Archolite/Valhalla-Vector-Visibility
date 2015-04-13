@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
 #  respond_to :html, :json
   protect_from_forgery with: :exception
 
+  def render_model_error(model)
+    render(json: Oj.dump({errors: model.errors}, mode: :compat), status: :bad_request)
+  end
 
   def index
   end

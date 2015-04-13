@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
 
-  namespace :api do #, defaults: {format: 'json'} do
+  namespace :api, defaults: {format: 'json'} do
     resources :flight_plans
   end
 

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5">
+      <div>
+        <h1>New Flight Plan</h1>
+      </div>
+
+      <form novalidate class="simple-form">
+        <div class="body">
+          <div>Origin: <input ng-model="flight_path.origin" /></div>
+          <div>Destination: <input ng-model="flight_path.destination" /></div>
+          <div>Speed: <input ng-model="flight_path.speed" /></div>
+          <div>Forecast Interval: <input ng-model="flight_path.interval" /></div>
+
+
+          <button ng-click="save()" class="btn btn-primary" >Forecast</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

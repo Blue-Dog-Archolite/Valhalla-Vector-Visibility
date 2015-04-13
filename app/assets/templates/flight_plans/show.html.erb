@@ -1,0 +1,25 @@
+<h1>
+  show me
+  </h1>
+
+
+  <img src="<%= @chart %>">
+
+  <% @labels = []; @forecast = []; %>
+<table>
+  <tr>
+    <% @labels.each do |key, label|%>
+      <td> <%= label %> </td>
+  <% end %>
+  </tr>
+
+  <% @forecast.each do |point| %>
+    <tr>
+    <% @labels.keys.each do |key| %>
+      <td>
+      <%= point[key]%>
+    </td>
+  <% end %>
+  </tr>
+<% end %>
+</table>

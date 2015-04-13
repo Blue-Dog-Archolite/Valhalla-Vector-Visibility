@@ -1,4 +1,10 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :flight_plan do
+    origin "MyString"
+destination "MyString"
+speed 1
+interval 1
+  end
+
   factory :boi_airport, class: Hash do
     initialize_with do
       {

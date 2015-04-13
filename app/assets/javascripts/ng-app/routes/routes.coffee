@@ -13,22 +13,24 @@ angular.module('valhalla.routes', ['ui.router']).config \
     .state 'default_map',
       url: '/maps'
       templateUrl: 'maps/default.html'
-    .state 'dashboard',
+
+
+    .state 'flight_plans',
       abstract: 'true'
-      url: '/dashboard'
-      templateUrl: 'dashboard/layout.html'
-    .state 'dashboard.one',
-      parent: 'dashboard'
+      url: '/flight_plans'
+      templateUrl: 'flight_plans/layout.html'
+  #      controller: 'FlightPlansController'
+    .state 'flight_plans.index',
+      parent: 'flight_plans'
       url: ''
-      templateUrl: 'dashboard/one.html'
-    .state 'dashboard.two',
-      parent: 'dashboard'
-      url: '/two'
-      templateUrl: 'dashboard/two.html'
-    .state 'dashboard.three',
-      parent: 'dashboard'
-      url: '/three'
-      templateUrl: 'dashboard/three.html'
+      templateUrl: 'flight_plans/show.html'
+    .state 'flight_plans.new',
+      parent: 'flight_plans'
+      url: '/new'
+      templateUrl: 'flight_plans/form.html'
+      controller: 'EditFlightPlanController'
+      resolve:
+        flightPlan: -> {}
 
    $urlRouterProvider.otherwise('/')
    $locationProvider.html5Mode(true)

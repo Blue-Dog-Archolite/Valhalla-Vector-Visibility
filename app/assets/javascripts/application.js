@@ -19,7 +19,10 @@
 //= require angular-rails-templates
 //= require angular-devise/lib/devise
 //= require angular-google-maps
+//= require angular-resource
 //= require lodash
 
+//= require app
+//= require_tree ./ng-app/.
+//= require_tree ../templates/.
 //= require_tree .
-//= require_tree ../templates

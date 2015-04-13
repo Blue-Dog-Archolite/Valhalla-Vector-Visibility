@@ -6,6 +6,7 @@ describe ForecastForPointInTimeAndSpace, :vcr do
 
   it '#predict' do
     flight_path.each do |time, location|
+      binding.pry
       ff = subject.predict(location, time.to_i)
       expect(ff.time).to eq(time.to_i)
       [
@@ -14,7 +15,7 @@ describe ForecastForPointInTimeAndSpace, :vcr do
         'dewPoint', 'humidity', 'windSpeed', 'windBearing',
         'visibility'
       ].each do |k|
-        expect(ff.key?(k.to_sym)).to be(true)
+        expect(ff.currently.key?(k.to_sym)).to be(true)
       end
     end
   end
