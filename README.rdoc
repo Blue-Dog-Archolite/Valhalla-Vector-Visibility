@@ -1,0 +1,11 @@
+# Things that are not working yet
+- Auth persistance
+- Auth Display of current User
+- Spinner on generation of forecast and render of forecast
+- disabled new button on click
+- Markers for Origin and Destination
+
+
+# TODO
+- Refactor AngularControllers
+- Refactor FlightPlan

@@ -90,6 +90,7 @@ describe FlightPath do
       points = @flight_path.points
 
       point_times = [
+        # Force time settings to verify correct plot points
         (@starting_time + 0.hours).to_i,
         (@starting_time + 3.hours).to_i,
         (@starting_time + 6.hours).to_i,

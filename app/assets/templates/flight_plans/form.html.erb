@@ -16,8 +16,9 @@
             <div>Departure Time: <input type='datetime-local' ng-model="flight_path.departure"/></div>
           -->
 
-
-          <button ng-click="save()" class="btn btn-primary" >Forecast</button>
+            <button ng-click="button=true; save()" class="btn btn-primary" ng-disabled="button" ng-init="button=true" >
+              Forecast
+          </button>
         </div>
       </form>
     </div>
