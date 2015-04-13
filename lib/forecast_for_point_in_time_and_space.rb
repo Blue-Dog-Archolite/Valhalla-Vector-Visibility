@@ -1,5 +1,6 @@
 module ForecastForPointInTimeAndSpace
   def self.predict(geo_point, time)
+    time = time.is_a?(DateTime) ? time.to_time : time
     # cache and check
     key = "#{Rails.env}-#{geo_point.ll}-#{time.to_i}"
 
@@ -14,11 +15,12 @@ module ForecastForPointInTimeAndSpace
     end
   end
 
+
   def self.simplify_forecast(forecast)
     {
       latitude:             forecast.latitude,
       longitude:            forecast.longitude,
-      time:                 Time.at(forecast.currently.time).strftime('%m-%e-%y %H:%M'),
+      time:                 self.formatted_time(forecast),
       summary:              forecast.currently.summary,
       precipIntensity:      forecast.currently.precipIntensity,
       precipProbability:    forecast.currently.precipProbability,
@@ -29,5 +31,9 @@ module ForecastForPointInTimeAndSpace
       windSpeed:            forecast.currently.windSpeed,
       windBearing:          forecast.currently.windBearing
     }
+  end
+
+  def self.formatted_time(forecast)
+    Time.at(forecast.currently.time).strftime('%m-%d-%Y %H:%M')
   end
 end

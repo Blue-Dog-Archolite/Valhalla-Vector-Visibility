@@ -6,16 +6,16 @@ describe ForecastForPointInTimeAndSpace, :vcr do
 
   it '#predict' do
     flight_path.each do |time, location|
-      binding.pry
       ff = subject.predict(location, time.to_i)
-      expect(ff.time).to eq(time.to_i)
+
+      expect(ff[:time]).to eq(time.strftime('%m-%d-%Y %H:%M'))
       [
-        'time', 'summary', 'icon', 'precipIntensity',
-        'precipProbability', 'temperature', 'apparentTemperature',
-        'dewPoint', 'humidity', 'windSpeed', 'windBearing',
-        'visibility'
+        :latitude, :longitude, :time,
+       :summary, :precipIntensity, :precipProbability,
+       :temperature, :apparentTemperature, :dewPoint,
+       :humidity, :windSpeed, :windBearing
       ].each do |k|
-        expect(ff.currently.key?(k.to_sym)).to be(true)
+        expect(ff.key?(k)).to be(true)
       end
     end
   end
@@ -23,10 +23,16 @@ describe ForecastForPointInTimeAndSpace, :vcr do
   it 'only calls to ForecastIO once per set of data' do
     point = flight_path.first
     key = Rails.env + '-41.8781136,-87.6297982-1388559600'
-    value = Hashie::Mash.new('currently' => { 'key' => 'value' })
+    value = Hashie::Mash.new('currently' => { 'time' => DateTime.new.to_time.to_i})
     REDIS.del(key)
     expect(ForecastIO).to receive(:forecast).once.and_return(value)
     subject.predict(point[1], point[0])
     subject.predict(point[1], point[0])
   end
+
+  it 'returns the correct time stamp for time requested' do
+    point = flight_path.first
+    subject.predict(point[1], point[0])
+  end
+
 end

@@ -55,6 +55,7 @@ group :development, :test do
   gem 'spring'
 
   gem 'pry'
+  gem 'pry-rescue'
   gem 'pry-stack_explorer'
 
   gem 'guard'

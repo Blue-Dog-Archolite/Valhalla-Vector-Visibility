@@ -5,7 +5,7 @@ describe FlightPath do
     @origin = FactoryGirl.build(:ord_airport)
     @destination = FactoryGirl.build(:boi_airport)
     # set static time to allow for VCR catch as well as back forecasting
-    @starting_time = Time.new('2014/03/21')
+    @starting_time = DateTime.new(2014,03,21)
   end
 
   describe 'gets all current conditions for the time and location', :vcr do
@@ -19,7 +19,15 @@ describe FlightPath do
       expect(forecast).to eq(expected_forecast)
     end
 
+    it 'has interval correclty calculated' do
+      expect(@flight_path.intervals).to be(14)
+
+      expect(@flight_path).to receive(:frequency).and_return(2)
+      expect(@flight_path.intervals).to be(7)
+    end
   end
+
+
 
   # TODO move this all to flight plan
   describe 'airport codes', :vcr do
@@ -45,12 +53,12 @@ describe FlightPath do
 
     it 'calculates the forcast points correctly' do
       points = @flight_path.points
-      point_times = [1388559600, 1388563200, 1388566800,
-                     1388570400, 1388574000, 1388577600,
-                     1388581200, 1388584800, 1388588400,
-                     1388592000, 1388595600, 1388599200,
-                     1388602800, 1388606400, 1388610000,
-                     1388611790]
+      point_times = [
+        1395360000, 1395363600, 1395367200, 1395370800,
+        1395374400, 1395378000, 1395381600, 1395385200,
+        1395388800, 1395392400, 1395396000, 1395399600,
+        1395403200, 1395406800, 1395410400, 1395412190
+      ]
 
       expect(points.keys.count).to eq(16)
 
@@ -89,12 +97,12 @@ describe FlightPath do
     it 'calculates the forcast points correctly' do
       # Difference due to exact locations
       points = @flight_path.points
-      point_times = [1388559600, 1388563200, 1388566800,
-                     1388570400, 1388574000, 1388577600,
-                     1388581200, 1388584800, 1388588400,
-                     1388592000, 1388595600, 1388599200,
-                     1388602800, 1388606400, 1388610000,
-                     1388611261]
+      point_times = [
+        1395360000, 1395363600, 1395367200, 1395370800,
+        1395374400, 1395378000, 1395381600, 1395385200,
+        1395388800, 1395392400, 1395396000, 1395399600,
+        1395403200, 1395406800, 1395410400, 1395411661
+      ]
 
       expect(points.keys.count).to eq(16)
 

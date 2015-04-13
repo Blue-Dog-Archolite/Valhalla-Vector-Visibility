@@ -27,7 +27,7 @@ class FlightPath
 
   def intervals
     # Round off that last one
-    (travel_time).to_i
+    (travel_time / frequency).to_i
   end
 
   def travel_time

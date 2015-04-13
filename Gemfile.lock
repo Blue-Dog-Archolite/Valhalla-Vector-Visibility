@@ -134,6 +134,7 @@ GEM
     hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.6.11)
+    interception (0.5)
     jasmine (2.2.0)
       jasmine-core (~> 2.2)
       phantomjs
@@ -181,6 +182,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-rescue (1.4.1)
+      interception (>= 0.5)
+      pry
     pry-stack_explorer (0.4.9.1)
       binding_of_caller (>= 0.7)
       pry (>= 0.9.11)
@@ -366,6 +370,7 @@ DEPENDENCIES
   oj
   pg
   pry
+  pry-rescue
   pry-stack_explorer
   rails (= 4.1.1)
   rb-inotify
