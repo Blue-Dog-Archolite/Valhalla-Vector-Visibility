@@ -8,10 +8,11 @@
 #
 users = [{
   email: 'rmeyer@halbrek.com',
-  password: 'faa11639'
+  password: ENV['VALHALLA_PASSWORD']
 },{
   email: 'plotwatt@halbrek.com',
-  password: 'faa11639'
+  password: ENV['VALHALLA_PASSWORD']
 }]
+
 
 users.each{|user| User.create(user) }

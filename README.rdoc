@@ -7,11 +7,12 @@
 - Used Bower for the first time on a time crunch
 
 # Things that are not working yet
-- Auth persistance
 - Auth Display of current User
+- Auth isn't technically a Single Page App. Modal not working right
 - Spinner on generation of forecast and render of forecast
 - disabled new button on click
 - Markers for Origin and Destination
+- Alerts on errors
 
 
 # TODO
