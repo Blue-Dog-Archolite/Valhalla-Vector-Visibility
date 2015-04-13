@@ -5,5 +5,6 @@ angular
     'ngResource',
     'templates',
     'Devise',
-    'valhalla.routes'
+    'valhalla.routes',
+    'uiGmapgoogle-maps'
   ]);

@@ -12,6 +12,7 @@ angular.module('valhalla.routes', ['ui.router']).config \
       templateUrl: 'users/login.html'
     .state 'default_map',
       url: '/maps'
+      controller: 'MapController'
       templateUrl: 'maps/default.html'
 
 
