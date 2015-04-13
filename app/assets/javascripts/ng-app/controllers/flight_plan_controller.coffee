@@ -1,8 +1,12 @@
 angular.module('valhalla').controller 'FlightPlanController', \
-['$scope', 'flightPlan', \
-($scope, flightPlan) ->
+['$scope', 'flightPlan', 'FlightMapService', \
+($scope, flightPlan, FlightMapService) ->
 
   $scope.flight_plan = flightPlan
+
+  $scope.map = FlightMapService.map
+
+  $scope.path = FlightMapService.path
 
   $scope.table = [
     { call: 'time',                 label: 'Time'},
