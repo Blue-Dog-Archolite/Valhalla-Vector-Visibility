@@ -1,6 +1,6 @@
 angular.module('valhalla').controller 'FlightPlansController', \
-['$scope', 'flightPlans', \
-($scope, flightPlans) ->
+['$scope', 'flightPlans', '$rootScope', \
+($scope, flightPlans, $rootScope) ->
 
   $scope.flight_plans = flightPlans
 

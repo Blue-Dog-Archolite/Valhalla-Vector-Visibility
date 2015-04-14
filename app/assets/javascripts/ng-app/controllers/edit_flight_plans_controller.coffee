@@ -2,7 +2,6 @@ angular.module('valhalla').controller 'EditFlightPlanController', \
 ['$scope', 'flightPlan', 'FlightPlanService', '$state', 'sharedMessagesService', \
 ($scope, flightPlan, FlightPlanService, $state, sharedMessagesService) ->
 
-
   $scope.flight_plan = flightPlan
 
   $scope.save = ->

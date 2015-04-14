@@ -17,3 +17,5 @@
 # TODO
 - Refactor AngularControllers
 - Refactor FlightPlan
+- Add form validation
+- Add Logout

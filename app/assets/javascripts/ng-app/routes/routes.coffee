@@ -40,6 +40,11 @@ angular.module('valhalla.routes', ['ui.router']).config \
       resolve:
         flightPlan: -> {}
 
+    .state 'user_information',
+      url: '/current_users/info'
+      controller: 'AuthController'
+      templateUrl: 'current_users/info.html'
+
     .state 'home',
       url: '/home'
       templateUrl: 'home.html'

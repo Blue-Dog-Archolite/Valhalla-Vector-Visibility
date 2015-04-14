@@ -1,12 +1,14 @@
-angular.module('valhalla').controller 'AuthController',['$scope', 'AuthService', ($scope, AuthService) ->
-  console.log('AuthController')
-  console.log(AuthService.isAuthenticated())
+angular.module('valhalla').controller 'AuthController',
+['$scope', 'Auth', \
+($scope, Auth) ->
 
-  $scope.log_in_user = (user_credentials) ->
-    user = AuthService.current_user()
-    console.log('user is' + user)
+  log_out_user = () ->
+    # According to DeviseModal and Devise angular
+    # this is the correct call. However, it appears
+    # that I am not correctly calling the service binding
+    Auth.logout()
 
-    user = AuthService.log_in_user(user_credentials)
-    console.log('user is now' + user)
-
+  {
+    log_out_user
+  }
 ]

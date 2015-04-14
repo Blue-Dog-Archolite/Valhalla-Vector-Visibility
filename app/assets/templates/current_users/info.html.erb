@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 dashboard-navigation">
+
+        <div class="body">
+          <h6>
+            Auth.currentUser() isn't reporting correctly so logout doesn't work.
+            Please clear your cookies
+          </h6>
+
+          <h4>
+            User Should be: {{ Auth.currentUser() }}
+          </h4>
+
+          <button ng-click="log_out_user()" class="btn btn-primary" >Logout</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
