@@ -1,5 +1,7 @@
 module Api
   class FlightPlansController < ApplicationController
+    before_action :authenticate_user!
+
     attr_reader :flight_plan
     before_action :fetch_flight_plan, only: [:show]
 
