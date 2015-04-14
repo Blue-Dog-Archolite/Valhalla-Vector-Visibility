@@ -6,5 +6,5 @@ angular
     'Devise',
     'valhalla.routes',
     'uiGmapgoogle-maps',
-    'DeviseModal'
+    'DeviseModal',
   ]);

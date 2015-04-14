@@ -42,9 +42,9 @@ angular.module('valhalla.routes', ['ui.router']).config \
 
     .state 'home',
       url: '/home'
-      templateUrl: 'navbar.html'
+      templateUrl: 'home.html'
 
-   $urlRouterProvider.otherwise('/')
+   $urlRouterProvider.otherwise('home')
    $locationProvider.html5Mode(true)
 
 ]

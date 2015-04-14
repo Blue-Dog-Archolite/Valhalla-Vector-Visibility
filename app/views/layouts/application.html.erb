@@ -9,8 +9,11 @@
     <%= csrf_meta_tags %>
     <base href="/">
   </head>
-
   <body ng-app="valhalla">
+    <div ng-controller="MessagesController" id="alerts">
+      <alert class="alert_box" ng-repeat="alert in alerts" type="alert.type" ng-click="close_alert($index)" close="close_alert($index)">{{alert.msg}}</alert>
+    </div>
+
     <%= yield %>
   </body>
 </html>

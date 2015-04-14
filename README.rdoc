@@ -12,7 +12,6 @@
 - Spinner on generation of forecast and render of forecast
 - disabled new button on click
 - Markers for Origin and Destination
-- Alerts on errors
 
 
 # TODO
