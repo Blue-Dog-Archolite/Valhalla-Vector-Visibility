@@ -11,11 +11,9 @@
 - Auth isn't technically a Single Page App. Modal not working right
 - Spinner on generation of forecast and render of forecast
 - disabled new button on click
-- Markers for Origin and Destination
 
 
 # TODO
 - Refactor AngularControllers
 - Refactor FlightPlan
-- Add form validation
 - Add Logout
