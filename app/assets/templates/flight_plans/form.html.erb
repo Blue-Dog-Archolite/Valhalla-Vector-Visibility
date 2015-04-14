@@ -5,20 +5,39 @@
         <h1>New Flight Plan</h1>
       </div>
 
-      <form novalidate class="simple-form">
-        <fieldset ng-disabled="isDisabled">
+      <div class='error-container' ng-show='flightPathForm.$invalid && !flightPathForm.$pristine'>
+        The Form Is Invalid: Please Check the Following
+        <ul>
+          <li>
+            Origin: Please use three char Airport Code, or Lat Long
+          </li>
+          <li>
+              Destination: Please use three char Airport Code, or Lat Long
+          </li>
+          <li>
+              Speed is require and has to be a number
+          </li>
+          <li>
+              Forecast Interval is require and has to be a number
+          </li>
+        </ul>
+      </div>
+
+      <form novalidate class="simple-form" name='flightPathForm' ng-disabled="isDisabled">
+        <fieldset>
           <div class="body">
-            <div>Origin: <input ng-model="flight_plan.origin" /></div>
-            <div>Destination: <input ng-model="flight_plan.destination" /></div>
-            <div>Speed: <input ng-model="flight_plan.speed" /></div>
-            <div>Forecast Interval: <input ng-model="flight_plan.interval" /></div>
+            <div>Origin: <input ng-model="flight_plan.origin" ng-minlength=3 ng-pattern='lat_long_regex'/></div>
+            <div>Destination: <input ng-model="flight_plan.destination" ng-minlength=3 /></div>
+            <div>Speed: <input type='number' ng-model="flight_plan.speed" required /></div>
+            <div>Forecast Interval: <input type='number' ng-model="flight_plan.interval" required/></div>
             <!--
               Implemented on the models, just not in the UI
               <div>Departure Time: <input type='datetime-local' ng-model="flight_path.departure"/></div>
             -->
 
-            <button ng-click="save()" class="btn btn-primary" ng-disabled={{isDisabled}}>
-                Forecast
+
+            <button ng-click="save()" class="btn btn-primary" ng-disabled='flightPathForm.$invalid'>
+              Forecast
             </button>
           </fieldset>
         </div>
