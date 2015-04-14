@@ -18,8 +18,9 @@ angular.module('valhalla.routes', ['ui.router']).config \
       templateUrl: 'flight_plans/index.html'
       controller: 'FlightPlansController'
       resolve:
-        flightPlans: (FlightPlanService) ->
+        flightPlans: ['FlightPlanService', (FlightPlanService) ->
           FlightPlanService.query().$promise
+        ]
 
     .state 'flight_plan',
       parent: 'flight_plans'
@@ -27,8 +28,9 @@ angular.module('valhalla.routes', ['ui.router']).config \
       templateUrl: 'flight_plans/show.html'
       controller: 'FlightPlanController'
       resolve:
-        flightPlan: (FlightPlanService, $stateParams) ->
+        flightPlan: ['FlightPlanService', '$stateParams', (FlightPlanService, $stateParams) ->
           FlightPlanService.fetch($stateParams.id).$promise
+        ]
 
     .state 'flight_plans.new',
       parent: 'flight_plans'
@@ -38,6 +40,11 @@ angular.module('valhalla.routes', ['ui.router']).config \
       resolve:
         flightPlan: -> {}
 
-   $urlRouterProvider.otherwise('/flight_plans')
+    .state 'home',
+      url: '/home'
+      templateUrl: 'navbar.html'
+
+   $urlRouterProvider.otherwise('/')
    $locationProvider.html5Mode(true)
+
 ]

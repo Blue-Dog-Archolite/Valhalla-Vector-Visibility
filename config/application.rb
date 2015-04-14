@@ -21,7 +21,7 @@ module ValhallaVectorVisibility
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     # Should load bower css and font
-    config.assets.paths << Rails.root.join("lib","assets","bower_components")
+    # config.assets.paths << Rails.root.join("lib","assets","bower_components")
 #    config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets", "stylesheets")
 #    config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets","fonts")
 
