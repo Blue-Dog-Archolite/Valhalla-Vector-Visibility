@@ -4,6 +4,9 @@ angular.module('valhalla').controller 'EditFlightPlanController', \
 
   $scope.flight_plan = flightPlan
 
+  $scope.lat_long_regex =
+    /^(\w{3}|[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?))$/
+
   $scope.save = ->
     $scope.isDisabled = true
     response = FlightPlanService.create($scope.flight_plan)

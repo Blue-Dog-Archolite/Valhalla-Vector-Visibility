@@ -16,8 +16,14 @@
 </ul>
 </div>
 
+{{origin_marker}}
+
+{{destination_marker}}
+
 <div id='map'>
   <ui-gmap-google-map center="map.center" zoom="map.zoom">
+  <ui-gmap-marker idkey="origin_marker.id" coords='origin_marker.coords'></ui-gmap-marker>
+  <ui-gmap-marker idkey="destination_marker.id" coords='destination_marker.coords'></ui-gmap-marker>
     <ui-gmap-polyline path="path" static="true"></ui-gmap-polyline>
   </ui-gmap-google-map>
 </div>
